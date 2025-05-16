@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Formularz</title>
+  <title>Formularz kontaktowy</title>
   <style>
     body {
       font-family: Tahoma;
@@ -48,14 +48,16 @@
   </style>
 </head>
 <body>
-  <form>
-    <input type="email" placeholder="Wpisz e-mail" required>
+  <form action="https://formspree.io/f/mjkwlwyk" method="POST">
+    <input type="email" name="email" placeholder="Wpisz e-mail" required>
 
     <label class="checkbox">
       <input type="checkbox" required>
       <span style="margin-left: 8px;">Zgadzam się z <a href="/regulamin" target="_blank">regulaminem</a></span>
     </label>
 
+    <input type="hidden" name="_subject" value="Nowy e-mail z formularza">
+    
     <button type="submit">Wyślij</button>
   </form>
 </body>
